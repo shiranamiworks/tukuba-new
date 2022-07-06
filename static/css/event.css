@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+/*----------------------------
+  event
+----------------------------*/
+#event {
+
+}
+
+#event section.event {
+  padding-bottom: 80px;
+}
+#event section.event .outer {
+  max-height: 800px;
+  overflow-y: scroll;
+}
+#event section.event .inner {
+  overflow-y: auto;
+}
+#event section.event .eventTables {
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+}
+#event section.event .eventTables:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+#event section.event .eventTables:nth-child(odd) {
+  background: #E2E0DC;
+}
+#event section.event .eventTables th,
+#event section.event .eventTables td {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  line-height: 1.7;
+  vertical-align: top;
+}
+#event section.event .eventTables th p,
+#event section.event .eventTables td p {
+  line-height: 1.7;
+}
+#event section.event .eventTables th {
+  width: 50%;
+  font-weight: bold;
+}
+#event section.event .eventTables .lead {
+  font-size: 90%;
+  padding: 15px 20px;
+}
+#event section.event .eventTables .lead .text {
+  padding-bottom: 15px;
+}
+#event section.event .eventTables .lead .commonBtn02 {
+  width: 100%;
+}
+#event section.event .eventTables .lead .commonBtn02 a:after {
+  margin-right: -110px;
+  right: 50%;
+}
+#event section.event .eventTables .date {
+  font-size: 110%;
+}
+#event section.event .eventTables .place {
+  font-size: 95%;
+}
+
+#event .commonBtn02 a {
+  text-align: center;
+  line-height: 1;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 14px 0 13px;
+  color: #fff;
+  background: #000;
+}
+
+
+@media (max-width: 1024px) {
+
+  #event section.event {
+    padding-bottom: 50px;
+  }
+  #event section.event .eventTables {
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 16px;
+  }
+  #event section.event .eventTables:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  #event section.event .eventTables:nth-child(odd) {
+    background: #E2E0DC;
+  }
+  #event section.event .eventTables th,
+  #event section.event .eventTables td {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border: 1px solid #aaa;
+    line-height: 1.7;
+    vertical-align: top;
+  }
+  #event section.event .eventTables th p,
+  #event section.event .eventTables td p {
+    line-height: 1.7;
+  }
+  #event section.event .eventTables th {
+    width: 50%;
+    font-weight: bold;
+  }
+  #event section.event .eventTables .lead {
+    font-size: 90%;
+    padding: 15px 20px;
+  }
+  #event section.event .eventTables .lead .text {
+    padding-bottom: 15px;
+  }
+  #event section.event .eventTables .lead .commonBtn02 {
+    width: 100%;
+  }
+  #event section.event .eventTables .lead .commonBtn02 a:after {
+    margin-right: -110px;
+    right: 50%;
+  }
+  #event section.event .eventTables .date {
+    font-size: 110%;
+  }
+  #event section.event .eventTables .place {
+    font-size: 95%;
+  }
+
+
+}
+@media (max-width: 757px) {
+
+  #event section.event .outer {
+    max-height: auto;
+    max-height: inherit;
+    overflow-y: auto;
+  }
+  #event section.event .eventTables {
+    display: block;
+    font-size: 13px;
+  }
+  #event section.event .eventTables tbody,
+  #event section.event .eventTables tr {
+    display: block;
+  }
+  #event section.event .eventTables th,
+  #event section.event .eventTables td {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: none;
+  }
+  #event section.event .eventTables th p,
+  #event section.event .eventTables td p {
+    line-height: 1.7;
+  }
+  #event section.event .eventTables td.place {
+    border-bottom: 1px solid #aaa;
+  }
+  #event section.event .eventTables th {
+    width: auto;
+  }
+  #event section.event .eventTables .lead {
+    font-size: 90%;
+  }
+  #event section.event .eventTables .lead .text {
+    padding-bottom: 15px;
+  }
+  #event section.event .eventTables .lead .commonBtn02 {
+    width: 100%;
+  }
+  #event section.event .eventTables .lead .commonBtn02 a:after {
+    margin-right: -110px;
+    right: 50%;
+  }
+
+
+}
