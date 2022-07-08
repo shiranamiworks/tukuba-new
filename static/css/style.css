@@ -1944,6 +1944,7 @@ display: none;
 }
   #feature .sec03 .slider {
     margin-bottom: 20px;
+    display: none;
   }
 #feature .sec03 .slider .movie{
   margin: 0 auto 20px;
