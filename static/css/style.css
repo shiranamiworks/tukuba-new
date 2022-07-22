@@ -220,7 +220,7 @@ End-responsible-contents  only-pc
   display: inherit;
 }
 .header .nav-list{
-  max-width: 500px;
+  max-width: 720px;
   text-align: center;
   margin: 0 0 0 auto;
   padding-top: 10px;
@@ -230,11 +230,15 @@ End-responsible-contents  only-pc
 }
 .header .nav-list li{
   display: inline-block;
-  width: 18%;
-  margin-right: 2%;
+  width: 13%;
+  margin-right: 1%;
+  vertical-align: middle;
+}
+.header .nav-list li:nth-child(5){
+  width: 17%;
 }
 .header .nav-list li:last-child{
-  width: 24%;
+  width: 15%;
   margin-right: auto;
 }
 .header .nav-list li a{
@@ -403,6 +407,7 @@ End-responsible-contents  only-pc
     border-right: none;
   }
   .globalnavi-base .globalnavi li:last-child{
+    width: 100% !important;
     border-bottom: none;
   }
 }
