@@ -6,21 +6,45 @@ $(function() {
  var html_array = [];
  var eid_list = [];
  var html_list = {};
+ var before_eid_list = [];
+ var after_eid_list = [];
+ var kengaku_codes  = [
+  "C0002",
+  "C0005",
+  "C0016",
+  "C0022",
+  "C0023",
+  "C0026",
+  "C0027",
+  "C0031",
+  "C0045",
+  "C0054",
+  "C0069",
+  "C0070",
+  "C0073",
+  "C0074",
+  "C0075",
+  "C0077",
+  "C0078"
+];
+
  $.ajax({
    "type" : "GET",
    "url": "https://www.sekisuihouse.co.jp/event/cgi/api/eventlist.php?siten=364003&hits=100&entrydate=1",
    "dataType" : 'jsonp',
-   "success" : function(data){console.log(data);
+   "success" : function(data){
      for(i in data){
        if(i > 99) break;
        eid_list.push(data[i].event_id) ;
        html_list[data[i].event_id] = "";
-       console.log(eid_list);
        $.ajax({
          "type" : "GET",
          "url": "https://www.sekisuihouse.co.jp/event/cgi/api/eventdetail.php?id="+data[i].event_id,
          "dataType" : 'jsonp',
-         "success" : function(d_data){
+         "success" : function(d_data){console.log(d_data);
+          if($.inArray(d_data.event.category.code,kengaku_codes) > -1){
+            before_eid_list.push(d_data.event.event_id);
+          }
            var _img = d_data.event.campaign.img !=  "" ? d_data.event.campaign.img : d_data.event.image.img;
            if(_img === ""){
             _img = d_data.event.kaijo.img;
@@ -58,7 +82,14 @@ $(function() {
                $(".sections.event .inner").append(html_array[v][0]["html"]);
              }*/
              for(h in eid_list){
-              $(".sections.event .inner").append(html_list[eid_list[h]]);
+              if($.inArray(eid_list[h],before_eid_list) > -1){
+                $(".sections.event .inner").append(html_list[eid_list[h]]);
+              }
+             }
+             for(h2 in eid_list){
+              if($.inArray(eid_list[h2],before_eid_list) == -1){
+                $(".sections.event .inner").append(html_list[eid_list[h2]]);
+              }
              }
            }
 
