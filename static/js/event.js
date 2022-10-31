@@ -27,6 +27,9 @@ $(function() {
   "C0077",
   "C0078"
 ];
+var last_codes  = [
+  "C0029"
+];
 
  $.ajax({
    "type" : "GET",
@@ -44,6 +47,9 @@ $(function() {
          "success" : function(d_data){console.log(d_data);
           if($.inArray(d_data.event.category.code,kengaku_codes) > -1){
             before_eid_list.push(d_data.event.event_id);
+          }
+          if($.inArray(d_data.event.category.code,last_codes) > -1){
+            after_eid_list.push(d_data.event.event_id);
           }
            var _img = d_data.event.campaign.img !=  "" ? d_data.event.campaign.img : d_data.event.image.img;
            if(_img === ""){
@@ -87,8 +93,13 @@ $(function() {
               }
              }
              for(h2 in eid_list){
-              if($.inArray(eid_list[h2],before_eid_list) == -1){
+              if($.inArray(eid_list[h2],before_eid_list) == -1 && $.inArray(eid_list[h2],after_eid_list) == -1 ){
                 $(".sections.event .inner").append(html_list[eid_list[h2]]);
+              }
+             }
+             for(h3 in eid_list){
+              if($.inArray(eid_list[h3],before_eid_list) == -1 && $.inArray(eid_list[h3],after_eid_list) > -1 ){
+                $(".sections.event .inner").append(html_list[eid_list[h3]]);
               }
              }
            }
