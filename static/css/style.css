@@ -689,7 +689,7 @@ display: none;
 .main-visual .slide .txt-img{
   position: absolute;
   left: 6%;
-  bottom: 180px;
+  bottom: 200px;
   width: 70%;
 }
 .main-visual .slide .texts{
@@ -1136,13 +1136,13 @@ display: none;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 35%;
+    bottom: 25%;
     margin: auto;
   }
   .main-visual .slide .texts{
     left: 0;
     right: 0;
-    bottom: 25%;
+    bottom: 15%;
     width: 90%;
     margin: auto;
   }
