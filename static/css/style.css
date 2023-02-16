@@ -1370,9 +1370,10 @@ display: none;
   padding-top: 40px;
 }
 #showroom .sections .anc li{
-  width: 18%;
+  width: 20%;
   display: inline-block;
   margin-right: 1%;
+  margin-bottom: 20px;
 }
 #showroom .sections .anc li a{
     position: relative;
