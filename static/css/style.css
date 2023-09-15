@@ -698,7 +698,7 @@ display: none;
 .main-visual .slide .txt-img{
   position: absolute;
   left: 6%;
-  bottom: 200px;
+  bottom: 220px;
   width: 70%;
 }
 .main-visual .slide .texts{
@@ -849,7 +849,9 @@ display: none;
   margin: 0 auto 90px;
 }
 #top .sec01{
-  margin-bottom: 160px;
+/*  margin-bottom: 160px;*/
+  background: #E2E0DC;
+  padding: 100px 0;
 }
 #top .sec01 .btns{
   text-align: center;
@@ -900,8 +902,9 @@ display: none;
 }
 
 #top .sec02{
-  background: #E2E0DC;
-  padding: 100px 0;
+/*  background: #E2E0DC;*/
+/*  padding: 100px 0;*/
+  margin-bottom: 110px;
 }
 #top .sec02 .show{
 display: none;
@@ -1149,7 +1152,7 @@ display: none;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 25%;
+    bottom: 30%;
     margin: auto;
   }
   .main-visual .slide .texts{
@@ -1227,7 +1230,7 @@ display: none;
       margin-top: 5px;
     }    
   #top .sec01{
-    margin-bottom: 50px;
+      padding: 50px 0;
   }
   #top .sec01 .btn02{
     margin-bottom: 30px;
@@ -1248,7 +1251,7 @@ display: none;
     margin: 0 auto 30px;
   }
   #top .sec02{
-    padding: 50px 0;
+    margin-bottom: 20px;
   }
   #top .sec02 .show{
     padding: 50px 0;
